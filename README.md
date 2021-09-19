@@ -96,7 +96,6 @@ Para conferir o domínio criado para o seu site, siga o passo a passo:
 * Acesse o settings do seu repositório 
 * Vá até o tópico GitHub Pages
 * Aqui você verá que o site está consultando a **branch gh-pages. Nessa mesma aba você visualizará** o domínio 
- [Click-me](https://j0se-luiz.github.io/site-react-on-git/)
 * Agora é só clicar no link e testar o seu site
 
 ![img.png](src/imgs/passo-6_3.png)
@@ -117,7 +116,7 @@ Para que sua página não apresente erros, lembre-se de **sempre definir em seu 
 "homepage": "[link do site]"
 ```
 
-* Defina os passos usados para publicar o nosso site. Assim eles serão executados quando rodarmos o comando **npm run deploy**
+* Defina os passos usados para publicar o nosso site. Assim eles serão executados quando rodarmos o comando **npm run deploy** (arquivo package.json linha 16)
 
 ![img.png](src/imgs/passo-6_6.png)
 
