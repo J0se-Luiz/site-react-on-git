@@ -13,7 +13,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "deploy":"npm run build && cd node_modules && cd .bin && gh-pages -d ../../build",
+    "deploy": "npm run build && cd node_modules && cd .bin && gh-pages -d ../../build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
