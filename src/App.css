@@ -11,6 +11,9 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .arrowRight{
+    animation: arrowRight-move infinite 0.2s linear;
+  }
 }
 
 .App-header {
@@ -28,6 +31,29 @@
   color: #61dafb;
 }
 
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+.colorLink {
+  color: white;
+  text-decoration: none;
+  padding-top: 9px;
+}
+
+.colorLink:hover {
+  color: green;
+  
+}
+
+.arrowRight{
+  color: red;
+  position: relative;
+  right: 10px;
+  font-size: 40px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,11 +63,11 @@
   }
 }
 
-.colorLink {
-  color: white;
-  text-decoration: none;
-}
-
-.colorLink:hover {
-  color: green;
+@keyframes arrowRight-move {
+  from {
+    right: 8px;
+  }
+  to {
+    right: 22px;
+  }
 }

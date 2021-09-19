@@ -19,14 +19,18 @@ function App() {
           Learn React
         </a>
 
-        <div>&nbsp;</div>
-        <a className="colorLink"
-          href="https://github.com/J0se-Luiz/site-react-on-git/blob/56262b91852f36bff0d0d864687f0e79617198be/README.md"
-        > 
-          React + Github, click to see the README!
-        </a>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
+        <div className="container">
+          <div className="arrowRight">➔</div>
+          <a
+            className="colorLink"
+            href="https://github.com/J0se-Luiz/site-react-on-git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            react static site published on github, click here and read the
+            README
+          </a>
+        </div>
 
       </header>
     </div>
