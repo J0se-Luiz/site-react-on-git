@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/site-react-on-git/static/css/main.ea27326a.chunk.css",
-    "main.js": "/site-react-on-git/static/js/main.b81c34e0.chunk.js",
-    "main.js.map": "/site-react-on-git/static/js/main.b81c34e0.chunk.js.map",
+    "main.css": "/site-react-on-git/static/css/main.c4903bc4.chunk.css",
+    "main.js": "/site-react-on-git/static/js/main.e335385a.chunk.js",
+    "main.js.map": "/site-react-on-git/static/js/main.e335385a.chunk.js.map",
     "runtime-main.js": "/site-react-on-git/static/js/runtime-main.a739e498.js",
     "runtime-main.js.map": "/site-react-on-git/static/js/runtime-main.a739e498.js.map",
     "static/js/2.b3f1c74c.chunk.js": "/site-react-on-git/static/js/2.b3f1c74c.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.e1d70a48.chunk.js": "/site-react-on-git/static/js/3.e1d70a48.chunk.js",
     "static/js/3.e1d70a48.chunk.js.map": "/site-react-on-git/static/js/3.e1d70a48.chunk.js.map",
     "index.html": "/site-react-on-git/index.html",
-    "static/css/main.ea27326a.chunk.css.map": "/site-react-on-git/static/css/main.ea27326a.chunk.css.map",
+    "static/css/main.c4903bc4.chunk.css.map": "/site-react-on-git/static/css/main.c4903bc4.chunk.css.map",
     "static/js/2.b3f1c74c.chunk.js.LICENSE.txt": "/site-react-on-git/static/js/2.b3f1c74c.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/site-react-on-git/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a739e498.js",
     "static/js/2.b3f1c74c.chunk.js",
-    "static/css/main.ea27326a.chunk.css",
-    "static/js/main.b81c34e0.chunk.js"
+    "static/css/main.c4903bc4.chunk.css",
+    "static/js/main.e335385a.chunk.js"
   ]
 }
