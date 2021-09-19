@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Hospedar um site feito em React usando o Github
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![img.jpeg](src/imgs/site_react_github.jpeg)
 
-## Available Scripts
+Passo a passo simples para disponibilizar seus sites estáticos React gratuitamente no Github.
 
-In the project directory, you can run:
+Vejo o resultado final [Click-me](https://j0se-luiz.github.io/site-react-on-git/)
+<br/><br/>
 
-### `yarn start`
+## Passo 1: Crie um repositório no github
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para iniciarmos, Crie um repositório no github. <br/>
+Lembrando que o nome do seu site será o mesmo que você colocar no seu repositório. exemplo o meu é **site-react-on-git**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![img.jpeg](src/imgs/passo-1.jpg)
+<br/><br/>
 
-### `yarn test`
+## Passo 2: Crie um projeto usando create-react-app:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+use o comando: npx create-react-app **site-react-on-git**
+![img.png](src/imgs/passo-2.png)
+<br/><br/>
 
-### `yarn build`
+## Passo 3: Crie a pasta com os arquivos build compilados
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dentro da pasta criada execute o comando npm run build. Esse comando criará uma pasta na raiz chamada “build”, e lá você encontrará todos os arquivos compilados do seu projeto, que usaremos para nosso site funcionar.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```shell
+cd site-react-on-git
+npm run build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![img.png](src/imgs/passo-3.png)
+<br/><br/>
 
-### `yarn eject`
+## Passo 4: Inicialize o git no projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Talvez o create-react-app tenha iniciado o git do projeto. Caso isso ocorra, **delete a pasta** do git e reinicie. obs..(a pasta do git fica oculta.)
+dentro da pasta do repositorio ela vai ta como **.git**
+![img.png](src/imgs/passo-4.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+git init
+git remote add origin [url do repositorio]
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Apos inicializar faça um commit e um push para o repositório criado. com isso seu código fonte já estará disponível no seu repositório na branch master.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```shell
+git add *
+git commit -m "versao inicial"
+git push
+git push --set-upstream origin master
+```
 
-## Learn More
+<br/><br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Passo 5: Adicione o GH-pages ao projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+é essa dependência que fará todo o trabalho para nós.
 
-### Code Splitting
+Ela cria uma nova **branch** no nosso repositório e sobe os arquivos compilados do projeto para o repositório. Os arquivos dessa branch serão usados para criar o nosso site no github. adicione gh-pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```shell
+npm install -g gh-pages --save-dev
+```
 
-### Analyzing the Bundle Size
+![img.png](src/imgs/passo-5.png)
+<br/><br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Passo 6: Publicando o site react estático no github
 
-### Making a Progressive Web App
+Para publicar o site, devemos executar o comando que cria os arquivos compilados de nosso projeto. Comece executando o comando **npm run build**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Em seguida, acesse a pasta .bin. Siga esse caminho: **./node_modules/.bin**.
 
-### Advanced Configuration
+Ao acessar a pasta, você executará o comando gh-pages -d ../../build. Ele entrará dentro da pasta de build e subir os arquivos compilados para **branch gh-pages no github.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```shell
+npm run build
+cd node_modules
+cd .bin
+gh-pages -d ../../build
+```
 
-### Deployment
+Ao final desse processo, aparecerá uma notificação informando a publicação dos arquivos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![img.png](src/imgs/passo-6.png)
 
-### `yarn build` fails to minify
+Agora quando você acessar o seu repositório, verá que existem **dois branches** (master e gh-pages). Onde você encontrará todos os arquivos compilados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![img.png](src/imgs/passo-6_2.png)
+
+Para conferir o domínio criado para o seu site, siga o passo a passo:
+
+* Acesse o settings do seu repositório 
+* Vá até o tópico GitHub Pages
+* Aqui você verá que o site está consultando a **branch gh-pages. Nessa mesma aba você visualizará** o domínio 
+ [Click-me](https://j0se-luiz.github.io/site-react-on-git/)
+* Agora é só clicar no link e testar o seu site
+
+![img.png](src/imgs/passo-6_3.png)
+
+
+## Erros na página
+Para que sua página não apresente erros, lembre-se de **sempre definir em seu projeto a URL** que a Home Page do site deve possuir.
+
+![img.png](src/imgs/passo-6_4.png)
+
+## Corrigindo Erros e automatizando deploy
+* Abra o arquivo package.json
+* Defina a **Home Page** do projeto react com o link do seu site gerado pelo github(arquivo package.json linha 5)
+
+![img.png](src/imgs/passo-6_5.png) 
+
+```shell
+"homepage": "[link do site]"
+```
+
+* Defina os passos usados para publicar o nosso site. Assim eles serão executados quando rodarmos o comando **npm run deploy**
+
+![img.png](src/imgs/passo-6_6.png)
+
+```shell
+"deploy":"npm run build && cd node_modules && cd .bin && gh-pages -d ../../build"
+```
+
+Apos feito isso suba novamente o projeto com gh-pages e o seu projeto já irá funcionar.
+
+```shell
+npm run deploy
+git add .
+git commit -m "SUA MENSAGEM"
+git push
+```
+
+Quando quiser subir uma versão nova, digite apenas o comando: **npm run deploy** e o projeto criará os arquivos necessários. não esqueça de fazer **PUSH** das suas alterações hehehe. 
+
+## Espero que esta informação tenha sido útil =) 
