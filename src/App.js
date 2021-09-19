@@ -27,8 +27,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            react static site published on github, click here and read the
-            README
+            React site estático publicado no github, clique aqui e leia o README
           </a>
         </div>
 
