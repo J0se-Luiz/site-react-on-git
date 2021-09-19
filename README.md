@@ -4,7 +4,7 @@
 
 Passo a passo simples para disponibilizar seus sites estáticos React gratuitamente no Github.
 
-Vejo o resultado final [Click-me](https://j0se-luiz.github.io/site-react-on-git/)
+Veja o resultado final [Click-me](https://j0se-luiz.github.io/site-react-on-git/)
 <br/><br/>
 
 ## Passo 1: Crie um repositório no github
