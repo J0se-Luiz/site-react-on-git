@@ -20,12 +20,10 @@ function App() {
         </a>
 
         <div>&nbsp;</div>
-        <a
-          href="src/logo.svg"
-          download="teste_visualdicas"
-        >
-          {" "}
-          Download README{" "}
+        <a className="colorLink"
+          href="https://github.com/J0se-Luiz/site-react-on-git/blob/56262b91852f36bff0d0d864687f0e79617198be/README.md"
+        > 
+          React + Github, click to see the README!
         </a>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
